@@ -131,6 +131,129 @@ fun SetupScreen(
                     packages = listOf(
                         PackageItem("go", context.getString(com.ai.assistance.operit.terminal.R.string.package_go_name), "golang-go", context.getString(com.ai.assistance.operit.terminal.R.string.package_go_desc))
                     )
+                ),
+                // 以下分类来自 Deepseek-Harness-Local-Android 扩展中心的 20 套工具链，
+                // 去掉 llama.cpp（本地推理）后与现有 6 种去重合并；包名为 Ubuntu Noble 的 apt 包名。
+                PackageCategory(
+                    id = "clang",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_clang_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_clang_desc),
+                    packages = listOf(
+                        PackageItem("clang", context.getString(com.ai.assistance.operit.terminal.R.string.package_clang_name), "clang", context.getString(com.ai.assistance.operit.terminal.R.string.package_clang_desc)),
+                        PackageItem("make", context.getString(com.ai.assistance.operit.terminal.R.string.package_make_name), "make", context.getString(com.ai.assistance.operit.terminal.R.string.package_make_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "cmake",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_cmake_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_cmake_desc),
+                    packages = listOf(
+                        PackageItem("cmake", context.getString(com.ai.assistance.operit.terminal.R.string.package_cmake_name), "cmake", context.getString(com.ai.assistance.operit.terminal.R.string.package_cmake_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "ruby",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_ruby_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_ruby_desc),
+                    packages = listOf(
+                        PackageItem("ruby", context.getString(com.ai.assistance.operit.terminal.R.string.package_ruby_name), "ruby", context.getString(com.ai.assistance.operit.terminal.R.string.package_ruby_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "php",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_php_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_php_desc),
+                    packages = listOf(
+                        PackageItem("php", context.getString(com.ai.assistance.operit.terminal.R.string.package_php_name), "php-cli", context.getString(com.ai.assistance.operit.terminal.R.string.package_php_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "lua",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_lua_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_lua_desc),
+                    packages = listOf(
+                        PackageItem("lua", context.getString(com.ai.assistance.operit.terminal.R.string.package_lua_name), "lua5.4", context.getString(com.ai.assistance.operit.terminal.R.string.package_lua_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "perl",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_perl_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_perl_desc),
+                    packages = listOf(
+                        PackageItem("perl", context.getString(com.ai.assistance.operit.terminal.R.string.package_perl_name), "perl", context.getString(com.ai.assistance.operit.terminal.R.string.package_perl_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "git",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_git_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_git_desc),
+                    packages = listOf(
+                        PackageItem("git", context.getString(com.ai.assistance.operit.terminal.R.string.package_git_name), "git", context.getString(com.ai.assistance.operit.terminal.R.string.package_git_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "archivers",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_archivers_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_archivers_desc),
+                    packages = listOf(
+                        PackageItem("zip", context.getString(com.ai.assistance.operit.terminal.R.string.package_zip_name), "zip", context.getString(com.ai.assistance.operit.terminal.R.string.package_zip_desc)),
+                        PackageItem("unzip", context.getString(com.ai.assistance.operit.terminal.R.string.package_unzip_name), "unzip", context.getString(com.ai.assistance.operit.terminal.R.string.package_unzip_desc)),
+                        PackageItem("xz-utils", context.getString(com.ai.assistance.operit.terminal.R.string.package_xz_utils_name), "xz-utils", context.getString(com.ai.assistance.operit.terminal.R.string.package_xz_utils_desc)),
+                        PackageItem("bzip2", context.getString(com.ai.assistance.operit.terminal.R.string.package_bzip2_name), "bzip2", context.getString(com.ai.assistance.operit.terminal.R.string.package_bzip2_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "ffmpeg",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_ffmpeg_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_ffmpeg_desc),
+                    packages = listOf(
+                        PackageItem("ffmpeg", context.getString(com.ai.assistance.operit.terminal.R.string.package_ffmpeg_name), "ffmpeg", context.getString(com.ai.assistance.operit.terminal.R.string.package_ffmpeg_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "imagemagick",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_imagemagick_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_imagemagick_desc),
+                    packages = listOf(
+                        PackageItem("imagemagick", context.getString(com.ai.assistance.operit.terminal.R.string.package_imagemagick_name), "imagemagick", context.getString(com.ai.assistance.operit.terminal.R.string.package_imagemagick_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "sqlite",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_sqlite_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_sqlite_desc),
+                    packages = listOf(
+                        PackageItem("sqlite3", context.getString(com.ai.assistance.operit.terminal.R.string.package_sqlite3_name), "sqlite3", context.getString(com.ai.assistance.operit.terminal.R.string.package_sqlite3_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "android-tools",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_android_tools_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_android_tools_desc),
+                    packages = listOf(
+                        PackageItem("adb", context.getString(com.ai.assistance.operit.terminal.R.string.package_adb_name), "adb", context.getString(com.ai.assistance.operit.terminal.R.string.package_adb_desc)),
+                        PackageItem("fastboot", context.getString(com.ai.assistance.operit.terminal.R.string.package_fastboot_name), "fastboot", context.getString(com.ai.assistance.operit.terminal.R.string.package_fastboot_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "vim",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_vim_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_vim_desc),
+                    packages = listOf(
+                        PackageItem("vim", context.getString(com.ai.assistance.operit.terminal.R.string.package_vim_name), "vim", context.getString(com.ai.assistance.operit.terminal.R.string.package_vim_desc))
+                    )
+                ),
+                PackageCategory(
+                    id = "android-buildtools",
+                    name = context.getString(com.ai.assistance.operit.terminal.R.string.category_android_buildtools_name),
+                    description = context.getString(com.ai.assistance.operit.terminal.R.string.category_android_buildtools_desc),
+                    packages = listOf(
+                        PackageItem("aapt", context.getString(com.ai.assistance.operit.terminal.R.string.package_aapt_name), "aapt", context.getString(com.ai.assistance.operit.terminal.R.string.package_aapt_desc)),
+                        PackageItem("aapt2", context.getString(com.ai.assistance.operit.terminal.R.string.package_aapt2_name), "aapt2", context.getString(com.ai.assistance.operit.terminal.R.string.package_aapt2_desc)),
+                        PackageItem("apksigner", context.getString(com.ai.assistance.operit.terminal.R.string.package_apksigner_name), "apksigner", context.getString(com.ai.assistance.operit.terminal.R.string.package_apksigner_desc)),
+                        // d8 在 Ubuntu 里没有 apt 包，走自定义下载安装（见安装分发里的 d8 分支）
+                        PackageItem("d8", context.getString(com.ai.assistance.operit.terminal.R.string.package_d8_name), "D8_INSTALL_COMMAND", context.getString(com.ai.assistance.operit.terminal.R.string.package_d8_desc))
+                    )
                 )
             )
         }
@@ -378,6 +501,9 @@ fun SetupScreen(
                                     val rustEnvCommand = sourceManager.getRustSourceEnvCommand(rustSource)
                                     // 添加环境变量设置和安装命令
                                     selectedCustomCommands.add("$rustEnvCommand && curl -v --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y")
+                                } else if (pkg.id == "d8") {
+                                    // d8 在 Ubuntu 里没有 apt 包：从 Google Maven 下载 r8 jar（8.13.25，内含 D8 类），写启动脚本装到 /usr/local/bin/d8
+                                    selectedCustomCommands.add("""mkdir -p /usr/local/share/d8 && curl -fsSL -o /usr/local/share/d8/r8.jar https://dl.google.com/dl/android/maven2/com/android/tools/r8/8.13.25/r8-8.13.25.jar && printf '#!/bin/sh\nexec java -cp /usr/local/share/d8/r8.jar com.android.tools.r8.D8 "${'$'}@"\n' > /usr/local/bin/d8 && chmod +x /usr/local/bin/d8""")
                                 } else if (pkg.id == "uv" || pkg.id == "nodejs") {
                                     selectedCustomCommands.add(pkg.command)
                                 } else if (category.id == "nodejs" && pkg.id != "nodejs") {
@@ -405,6 +531,11 @@ fun SetupScreen(
                         }
                         if (selectedPackages.getOrDefault("nodejs", false)) {
                             allAptDeps.add("curl")
+                        }
+                        if (selectedPackages.getOrDefault("d8", false)) {
+                            // d8 安装脚本用 curl 下载 jar，运行时需要 java
+                            allAptDeps.add("curl")
+                            allAptDeps.add("openjdk-17-jdk")
                         }
                     }
                     
@@ -641,6 +772,7 @@ private suspend fun checkPackageInstalled(
 ): Boolean {
     val command: String = when (pkg.id) {
         "rust" -> "command -v rustc"
+        "d8" -> "command -v d8"
         "uv" -> "command -v uv"
         "nodejs" -> "node -v 2>/dev/null"
         "pnpm" -> "test -f \"\$(npm prefix -g)/bin/pnpm\" && echo FOUND_PNPM"
@@ -663,7 +795,7 @@ private suspend fun checkPackageInstalled(
             val majorVersion = versionMatch?.groupValues?.getOrNull(1)?.toIntOrNull() ?: 0
             majorVersion >= 24
         }
-        "rust", "uv", "go", "ssh", "sshpass", "openssh-server", "gradle" -> output.isNotBlank() && !output.contains("not found")
+        "rust", "uv", "go", "ssh", "sshpass", "openssh-server", "gradle", "d8" -> output.isNotBlank() && !output.contains("not found")
         "pnpm" -> output.contains("FOUND_PNPM")
         else -> output.contains("Status: install ok installed")
     }
